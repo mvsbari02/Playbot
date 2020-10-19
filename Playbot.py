@@ -61,9 +61,9 @@ def inp():
 
 
 def calculations():
-    expression = input("enter an expression : ")
+    expression = input("\n\nEnter an expression : ")
     try:
-        print("Answer is : ",eval(expression),"\n") 
+        print("\nAnswer is : ",eval(expression),"\n") 
     except Exception as e:
         print(str(e),"\n")
 
@@ -145,11 +145,8 @@ def rock_pap_sis():
 def playbot():
     intro()
     wishes()
-    print("-------------------------------------------------------------------------------")
     drop_menu()
-    print("-------------------------------------------------------------------------------")
     choice = inp()
-    print("-------------------------------------------------------------------------------")
     while (choice != 3):
         if(choice == 1):
             calculations()
@@ -163,10 +160,7 @@ def playbot():
         drop_menu()
         choice = inp()
     if(choice == 3):
-        print("(_______  ｡♥‿♥｡)   乂❤‿❤乂    Nice talking to you   乂❤‿❤乂  (｡♥‿♥｡) _________")
+        print("\n\n(_______  ｡♥‿♥｡)   乂❤‿❤乂    Nice talking to you   乂❤‿❤乂  (｡♥‿♥｡) _________\n\n")
 
 
 playbot()
-
-
-

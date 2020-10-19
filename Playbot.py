@@ -72,70 +72,72 @@ def rock_pap_sis():
     print(" Press P for Paper.")
     print(" Press S for Scissor.")
     print("\n Who first gets 5 points is the winner.\n ")
+    print(" Press E if you want to exit the game any time.\n")
     print(" Your choice   ( ͡° ͜ʖ ͡°)  : ")
-    entries = ["R","P","S"]
-    bot_points = 0
-    user_points = 0
-    while(bot_points<5 and user_points<5):
+    bot_entries = ["R","P","S"]
+    user_entries = ["R","P","S","E"]
+    botpoints = 0
+    userpoints = 0
+    while (botpoints<5 and userpoints<5):
         choice = input("Enter your choice : ")
-        if(choice not in entries):
+        if (choice not in user_entries):
             print("\n You entered the wrong one")
-            print("Enter only R ,P or s")
+            print("Enter only R ,P, S or E")
+            continue
+        bot = random.choice(bot_entries)
+        if choice == "E":
+            return 0
+        if (choice == "R"):
+            if (bot == "R"):
+                print("You : Rock  Playbot : Rock")
+                print("Draw")
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            elif (bot == "P"):
+                print("You : Rock  Playbot : Paper")
+                print("Bad Choice   ಠ╭╮ಠ")
+                botpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            else:
+                print("You : Rock  Playbot : Scissor")
+                print("Good Job   (◑‿◐)")
+                userpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+        elif (choice == "P"):
+            if (bot == "P"):
+                print("You : Paper  Playbot : Paper")
+                print("Draw")
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            elif (bot == "S"):
+                print("You : Paper  Playbot : Scissor")
+                print("Bad Choice   ಠ╭╮ಠ")
+                botpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            else:
+                print("You : Paper  Playbot : Rock")
+                print("Good Job   (◑‿◐)")
+                userpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
         else:
-            play(choice,bot_points,user_points)
-    if(bot_points > user_points):
-        print(" (✖╭╮✖)  (✖╭╮✖)  You Lost  (✖╭╮✖)  (✖╭╮✖)")
-        print(" You lost the Game by ",(bot_points-user_points))
+            if (bot == "P"):
+                print("You : Scissor  Playbot : Paper")
+                print("Good Job   (◑‿◐)")
+                userpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            elif (bot == "S"):
+                print(" You : Scissor  PlayBot : Scissor")
+                print("Draw")
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+            else:
+                print("You : Scissor  Playbot : Rock")
+                print("Bad Choice   ಠ╭╮ಠ")
+                botpoints+=1
+                print("Your points : ",userpoints,"\n My points : ",botpoints)
+    if (botpoints > userpoints):
+       print(" (✖╭╮✖)  (✖╭╮✖)  You Lost  (✖╭╮✖)  (✖╭╮✖)")
+       print(" You lost the Game by ",(botpoints-userpoints))
     else:
-        print(" (◍•ᴗ•◍)❤   (◍•ᴗ•◍)❤   You Won  (◍•ᴗ•◍)❤  (◍•ᴗ•◍)❤")
+       print(" (◍•ᴗ•◍)❤   (◍•ᴗ•◍)❤   You Won  (◍•ᴗ•◍)❤  (◍•ᴗ•◍)❤")
 
-def play(choice,bot_points,user_points):
-    entries = ["R","P","S"]
-    bot = random.choice(entries)
-    if(choice == "R"):
-        if(bot == "R"):
-            print("You : Rock  Playbot : Rock")
-            print("Draw")
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        elif(bot == "P"):
-            print("You : Rock  Playbot : Paper")
-            print("Bad Choice   ಠ╭╮ಠ")
-            bot_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        else:
-            print("You : Rock  Playbot : Scissor")
-            print("Good Job   (◑‿◐)")
-            user_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-    elif(choice == "P"):
-        if(bot == "P"):
-            print("You : Paper  Playbot : Paper")
-            print("Draw")
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        elif(bot == "S"):
-            print("You : Paper  Playbot : Scissor")
-            print("Bad Choice   ಠ╭╮ಠ")
-            bot_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        else:
-            print("You : Paper  Playbot : Rock")
-            print("Good Job   (◑‿◐)")
-            user_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-    else:
-        if(bot == "P"):
-            print("You : Scissor  Playbot : Paper")
-            print("Good Job   (◑‿◐)")
-            user_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        elif(bot == "S"):
-            print("Draw")
-            print("Your points : ",user_points,"\n My points : ",bot_points)
-        else:
-            print("You : Scissor  Playbot : Rock")
-            print("Bad Choice   ಠ╭╮ಠ")
-            bot_points+=1
-            print("Your points : ",user_points,"\n My points : ",bot_points)
 
 def playbot():
     intro()
@@ -157,6 +159,7 @@ def playbot():
 
 
 playbot()
+
 
 
 

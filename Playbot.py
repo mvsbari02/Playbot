@@ -46,8 +46,8 @@ def drop_menu():
     print(" Are you getting bored ? wanna do something    （‐＾▽＾‐）       .......   \n")
     print("What do you wanna do : \n")
     print(" 1. Perform some calculation.")
-    print(" 2. Play rock paper scissors    (≧∇≦*)  .\n")
-    print(" 3. End the chat. ")
+    print(" 2. Play rock paper scissors    (≧∇≦*)  .")
+    print(" 3. End the chat. \n")
     print(" Choose an option : ")
 
 def inp():
@@ -150,17 +150,15 @@ def playbot():
         elif(choice == 2):
             rock_pap_sis()
         else:
-            print("I don't understand.  ヽ༼⊙_⊙༽ﾉ  ")
+            print(" ヽ༼⊙⊙༽ﾉ   (⊙☉)  I don't understand.  (⊙☉)  ヽ༼⊙⊙༽ﾉ  ")
             print("Please enter only 1 or 2  or 3")
         drop_menu()
         choice = inp()
     if(choice == 3):
-        print("Nice talking to you. ________  ʕ ▀ ڡ ▀ ʔ  ʕ ▀ ڡ ▀ ʔ  __________")
+        print("(___  ｡♥‿♥｡)   乂❤‿❤乂    Nice talking to you   乂❤‿❤乂  (｡♥‿♥｡) ___")
 
 
 playbot()
-
-
 
 
 

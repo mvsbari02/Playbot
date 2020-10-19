@@ -23,7 +23,7 @@
           - If user enters anything other than the valid input it prints corresponding error message.
 
 ->   Flowchart for playbot function.     
-![](https://drive.google.com/file/d/1wlkNUwK0peL_-XcP8vmjU5Hj1ySID2aY/view?usp=sharing)
+![](Playbot Flowcart.jpeg)
           
 #Project_Playbot  (ɔ◔‿◔)ɔ ♥
 

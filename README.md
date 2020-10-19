@@ -21,3 +21,6 @@
 ->   It shows the instructions of the game 
           - It asks the user to choose one among rock paper and scissor.
           - If user enters anything other than the valid input it prints corresponding error message.
+          
+          
+#Project_Playbot  (ɔ◔‿◔)ɔ ♥

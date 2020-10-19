@@ -22,7 +22,8 @@
           - It asks the user to choose one among rock paper and scissor.
           - If user enters anything other than the valid input it prints corresponding error message.
 
-->   Flowchart for playbot function.    -     ![](IMG_20201019_202944.jpg)
+->   Flowchart for playbot function.     
+![](https://drive.google.com/file/d/1wlkNUwK0peL_-XcP8vmjU5Hj1ySID2aY/view?usp=sharing)
           
 #Project_Playbot  (ɔ◔‿◔)ɔ ♥
 
